@@ -77,7 +77,7 @@
                             <td><?php echo $row["fecha_nacimiento"]; ?></td>
                             <td>
                                 <a href="" class="btn btn-primary">Editar</a>
-                                <a href="" class="btn btn-danger">Eliminar</a>
+                                <a href="eliminarDatos.php" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                       <?php 
