@@ -2,12 +2,15 @@
 
     Include 'conexion.php';
     $id = $_GET["id"];
-    $sql = "DELETE from usuarios where id = ".$id;
+
+    $sql = "DELETE FROM usuarios WHERE id = ".$id;
     
     if($conexion->query($sql) === TRUE){
-        echo "Registro guardado con Éxito <a href='consultarDatos.php'>Regresar</a>";
+        echo "Se elimino el registro con ID ".$id."<br>";
+        echo "<a href='consultarDatos.php'>Regresar</a";
 
     }else{
-        echo "Error: ".$sql. "<br>".$conexion->error."<br><br><a href='consultarDatos.php'>Regresar</a>";
+        echo "Ocurrio un error: ". $conexion->error . "<br>";
+        echo "<a href='consultarDatos.php'>Regresar</a>";
     }
 ?>
